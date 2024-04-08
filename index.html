@@ -1,39 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple HTML Page</title>
-  <style>
-    /* Add your CSS styles here */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      color: #333;
-    }
-    p {
-      color: #666;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Portfolio</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<div class="container">
-  <h1>Welcome to My Simple HTML Page</h1>
-  <p>This is a simple HTML template. Feel free to customize it as needed.</p>
-</div>
+  <body class="bg-gray-100">
+    <div class="relative text-gray-800 bg-gray-50">
+      <!-- Navbar -->
+      <header>
+        <nav class="w-full">
+          <div class="flex justify-between w-full px-16 py-8">
+            <!-- Left Nav -->
+            <div>
+              <ul
+                class="flex flex-col text-left md:flex-row space-y-5 md:space-y-0 md:space-x-6 text-xl md:text-2xl"
+              >
+                <li class="text-left">
+                  <a href="#experience"> Experience </a>
+                </li>
+                <li class="text-left">
+                  <a href="#contact"> Contact </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Right Nav -->
+            <div>
+              <!-- Socials -->
+              <ul
+                class="flex flex-col md:flex-row items-end md:items-center md:space-x-4 space-y-4 md:space-y-0"
+              >
+                <li>
+                  <a
+                    href="https://github.com/rkumarkravi"
+                    target="_blank"
+                    aria-label="Github"
+                    class="hover:text-blue-600"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-9 h-9"
+                      fill="currentColor"
+                      class="bi bi-github"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </a>
+                </li>
 
-</body>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/ravi-kumar-83b9b2150/"
+                    target="_blank"
+                    aria-label="linkedin"
+                    class="hover:text-blue-600"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-9 h-9 rounded-full"
+                      fill="currentColor"
+                      class="bi bi-linkedin"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- / Navbar -->
+      <!-- Name section -->
+      <section
+        class="flex flex-col items-center justify-center h-screen -my-20 md:-mt-48 px-8"
+      >
+        <!-- style="height: 50vh" -->
+        <div
+          class="flex flex-col items-center justify-center text-center h-screen-half"
+        >
+          <!-- image -->
+          <img
+            class="md:hidden object-cover w-15 h-40 rounded-full mb-5 ring-2 ring-gray-500/50 ring-offset-[10px]"
+            src="./images/myimage.png"
+            alt="Ravi Kumar"
+          />
+          <h1 class="text-5xl sm:text-6xl lg:text-9xl">Ravi Kumar</h1>
+          <h2 class="font-light text-4xl sm:text-5xl lg:text-8xl">
+            Senior Software Engineer
+          </h2>
+        </div>
+      </section>
+      <!-- /Name Section -->
+      <!-- image section -->
+      <section
+        class="flex items-center justify-between px-8 mb-20 tracking-wider"
+      >
+        <!-- Summary (left) -->
+        <div
+          class="flex flex-col w-full md:w-1/3 space-y-12 text-center md:text-left"
+        >
+          <div class="flex flex-col px-10 md:px-20">
+            <h3 class="text-xl font-bold">Skills</h3>
+            <br />
+            <span class="text-lg">Java Full Stack</span>
+            <span class="text-lg">React</span>
+            <span class="text-lg">Flutter</span>
+          </div>
+          <div class="px-10 md:px-20">
+            <h3 class="text-xl font-bold">Summary</h3>
+            <br />
+            <p class="w-full md:w-2/3">
+              Experienced Senior Engineer adept in API integration, maintenance,
+              and project migration. Proficient in AngularJS, Vue.js, and Spring
+              Boot, with expertise in user reactivation and third-party API
+              integration.
+            </p>
+          </div>
+          <div class="px-0 md:px-20">
+            <br />
+            <h3 class="text-xl font-bold" id="contact">Contact</h3>
+            <a
+              class="text-xl hover:text-blue-600"
+              href="mailto:er.rkumar96+portfolio@gmail.com"
+              >er.rkumar96+portfolio@gmail.com</a
+            >
+            <p class="phone-no"></p>
+          </div>
+        </div>
+        <!-- image -->
+        <img
+          class="hidden md:block object-cover w-1/4 h-screen rounded-full ring-2 ring-gray-500/50 ring-offset-[30px]"
+          src="./images/myimage.png"
+          alt="Ravi Kumar"
+        />
+        <!-- statistics (right) -->
+        <div class="hidden md:flex flex-col w-1/3 space-y-12 text-right">
+          <div class="px-20">
+            <h4 class="text-xl font-bold">Experience</h4>
+            <br />
+            <p class="text-6xl" id="experience-yrs">5</p>
+          </div>
+          <!-- <div class="px-20">
+            <h4 class="text-xl font-bold">Projects</h4>
+            <br />
+            <p class="text-6xl">+25</p>
+          </div>
+          <div class="px-20">
+            <h4 class="text-xl font-bold">Clients</h4>
+            <br />
+            <p class="text-6xl">+14</p>
+          </div> -->
+        </div>
+      </section>
+      <!-- /image section -->
+      <hr class="border-gray-400 mx-44" id="experience"/>
+      <!-- Experience -->
+      <section class="px-20 mt-10">
+        <h4 class="mb-8 text-3xl font-bold text-center md:text-left">
+          Experience
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-6 my-10">
+          <div class="flex flex-col col-span-2 mb-4 md:mb-0">
+            <h5 class="text-xl md:text-2xl font-bold">Senior Engineer</h5>
+            <h6 class="text-lg font-bold text-gray-500">Spice Money</h6>
+            <p>Jun 2022 - Present · <span id="result-exp-SM"></span></p>
+            <p>Remote</p>
+          </div>
+          <div class="flex flex-col col-span-4">
+            <p>
+              Worked in API integration & maintenance and migration of projects
+              from Spring to Spring Boot and Maven.
+            </p>
+            <ol class="list-disc pl-6">
+              <li>
+                <p>BBPS: NPCI BBPS COU facing integration and maintenance.</p>
+                <p>Techs: AngularJS, Spring Boot, Oracle DB.</p>
+              </li>
+              <li>
+                <p>
+                  DMT (Direct Money Transfer): Worked as a frontend developer in
+                  this module.
+                </p>
+                <p>Techs: Vue.js</p>
+              </li>
+              <li>
+                <p>
+                  Rekyc module: In this module, when a user is made to inactive
+                  state, the user has to resubmit the details to come into
+                  active state so that the user can use the services.
+                </p>
+                <p>
+                  Techs: Spring Boot and third-party API integration for face
+                  match & distance check.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-6 my-10">
+          <div class="flex flex-col col-span-2 mb-4 md:mb-0">
+            <div>
+              <h5 class="text-xl md:text-2xl font-bold">
+                Associate Consultant
+              </h5>
+              <h6 class="text-lg font-bold text-gray-500">Virtusa</h6>
+              <p>Full-time · 3 yrs 1 mo</p>
+              <p>Pune, Maharashtra, India</p>
+            </div>
+          </div>
+          <div class="flex flex-col col-span-4">
+            <p>
+              It was really an amazing journey, learned a lot of things and
+              worked as a full-stack developer.
+            </p>
+            <p>Frontend: HTML, CSS, JS, AngularJS, Angular 7</p>
+            <p>Backend: Spring Boot</p>
+            <h6 class="text-lg font-bold mt-4">Roles and Responsibilities:</h6>
+            <ol class="list-disc pl-6">
+              <li>Bug fixing</li>
+              <li>Development</li>
+              <li>Jenkins deployment</li>
+              <li>
+                Deployment of one of my simulators created for the automation
+                environment
+              </li>
+            </ol>
+            <h6 class="text-lg font-bold mt-4">Frontend Work:</h6>
+            <ol class="list-disc pl-6">
+              <li>Any enhancement-related development</li>
+              <li>Fixing of issues</li>
+              <li>Deployment of the application on Oracle server</li>
+              <li>
+                Worked with the team on a dashboard to show reports graphically
+                in Angular
+              </li>
+            </ol>
+            <h6 class="text-lg font-bold mt-4">Backend Work:</h6>
+            <ol class="list-disc pl-6">
+              <li>Issue fixing and tracking the logs through putty</li>
+              <li>Any enhancement related development</li>
+              <li>Understanding of the whole application flow</li>
+              <li>
+                Spring Boot application created for the automation environment
+                which helps in getting the mock responses which are fully
+                configurable
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <hr class="border-gray-400 mx-44" />
+      <!-- Eductaion -->
+      <section class="px-20 mt-10">
+        <style>
+          .education-tree {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .year {
+            display: flex;
+            align-items: center;
+            border-left: 2px solid #333; /* Adjust the color and thickness as needed */
+            padding-left: 10px; /* Adjust the spacing as needed */
+            margin-bottom: 20px; /* Adjust the spacing between years as needed */
+          }
+
+          .year h4 {
+            margin-right: 10px;
+          }
+        </style>
+        <h4 class="mb-8 text-3xl font-bold text-center md:text-left">
+          Education
+        </h4>
+        <div class="education-tree">
+          <div class="year">
+            <h4>2015 - 2019</h4>
+            <div class="flex flex-col col-span-2 mb-4 md:mb-0">
+              <h5 class="text-xl md:text-2xl font-bold">
+                B.Tech, Computer Science and Engineering
+              </h5>
+              <h6 class="text-lg text-gray-500">
+                GL Bajaj Institute of Technology and Management, Greater Noida
+              </h6>
+              <p>Grade: 74.88 %</p>
+            </div>
+          </div>
+
+          <div class="year">
+            <h4>2014 - 2015</h4>
+            <div class="flex flex-col col-span-2 mb-4 md:mb-0">
+              <h5 class="text-xl md:text-2xl font-bold">12th, PCM with IP</h5>
+              <h6 class="text-lg text-gray-500">Army Public School, Ranchi</h6>
+              <p>Grade: 84.8 %</p>
+            </div>
+          </div>
+
+          <div class="year">
+            <h4>2012 - 2013</h4>
+            <div class="flex flex-col col-span-2 mb-4 md:mb-0">
+              <h5 class="text-xl md:text-2xl font-bold">10th</h5>
+              <h6 class="text-lg text-gray-500">Army Public School, Ranchi</h6>
+              <p>Grade: 83.6 %</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="border-gray-400 mx-44" />
+      <!-- Personal Projects -->
+      <section class="px-20 mt-10">
+        <h4 class="mb-8 text-3xl font-bold text-center md:text-left">
+          Personal Projects
+        </h4>
+        <div class="flex flex-row flex-wrap">
+            <!-- PROJECT #1-->
+          <div
+            class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2md my-4"
+          >
+            <div class="md:flex">
+              <div class="p-8">
+                <div
+                  class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"
+                >
+                  Personal Project
+                </div>
+                <a
+                  href="https://github.com/rkumarkravi/flutterProjects/tree/main/animax"
+                  class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
+                  >Anime streaming app with flutter</a
+                >
+                <p class="mt-2 text-gray-500">
+                  This app created with Flutter for the front-end and Spring
+                  Boot for the back-end.
+                </p>
+                <ol class="list-disc pl-6">
+                  <li>Sign-in/Sign-up</li>
+                  <li>Watch Anime</li>
+                  <li>Add to My-List</li>
+                  <li>Anime Release Calendar</li>
+                  <li>Search Animes</li>
+                </ol>
+
+                <div class="mt-4">
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                    >#HTML</span
+                  >
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                    >#CSS</span
+                  >
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+                    >#JavaScript</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PROJECT #2-->
+          <div
+            class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2md my-4"
+          >
+            <div class="md:flex">
+              <div class="p-8">
+                <div
+                  class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"
+                >
+                  Personal Project
+                </div>
+                <p
+                  href="#"
+                  class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
+                  >Spotify Clone</p
+                >
+                <p class="mt-2 text-gray-500">
+                  This app created with React for the front-end and Spring
+                  Boot for the back-end.
+                </p>
+                <ol class="list-disc pl-6">
+                  <li>Frontend: <a href="https://github.com/rkumarkravi/react-projects/tree/master/spotify-clone"> repo link </a></li>
+                  <li>Backend: <a href="https://github.com/rkumarkravi/spring-boot-projects/tree/main/musify-rk"> repo link </a></li>
+                  <li>Listen Songs</li>
+                  <li>Upload new Songs</li>
+                  <li>Search Songs</li>
+                </ol>
+
+                <div class="mt-4">
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                    >#React</span
+                  >
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                    >#Java</span
+                  >
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+                    >#SpringBoot</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PROJECT #3-->
+          <div
+            class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2md my-4"
+          >
+            <div class="md:flex">
+              <div class="p-8">
+                <div
+                  class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"
+                >
+                  Personal Project
+                </div>
+                <a
+                  href="https://github.com/rkumarkravi/react-projects/tree/master/receipe-book"
+                  class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
+                  >Receipe Book</a
+                >
+                <p class="mt-2 text-gray-500">
+                  This app created with React for the front-end and Node.js for the back-end.
+                </p>
+                <ol class="list-disc pl-6">
+                  <li>Create new Receipe</li>
+                  <li>View Receipe</li>
+                  <li>Home</li>
+                  <li>Search Receipe</li>
+                </ol>
+
+                <div class="mt-4">
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                    >#React</span
+                  >
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                    >#Node.js</span
+                  >
+                  <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+                    >#express</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer
+        class="absolute w-full h-36 bottom-0 p-8 px-16 bg-gray-800 text-gray-50"
+      >
+        <p class="text-2xl">Thank you for checking out my portfolio</p>
+        <a class="text-lg" href="mailto:er.rkumar96+portfolio@gmail.com"
+          >er.rkumar96+portfolio@gmail.com</a
+        >
+      </footer>
+      <div class="h-80"></div>
+    </div>
+    <script>
+      function calculateDifference(date, id) {
+        // Get the start date
+        var startDate = new Date(date); // Example start date
+
+        // Get the current date
+        var currentDate = new Date();
+
+        // Calculate the difference in years and months
+        var yearsDiff = currentDate.getFullYear() - startDate.getFullYear();
+        var monthsDiff = currentDate.getMonth() - startDate.getMonth();
+
+        // Adjust for negative months difference
+        if (monthsDiff < 0) {
+          yearsDiff--;
+          monthsDiff += 12;
+        }
+
+        // Display the result
+        document.getElementById(id).innerHTML =
+          yearsDiff + (yearsDiff === 1 ? " yr " : " yrs ") + monthsDiff + " mo";
+      }
+      calculateDifference("2022-06-20", "result-exp-SM");
+      calculateDifference("2019-06-10", "experience-yrs");
+    </script>
+  </body>
 </html>

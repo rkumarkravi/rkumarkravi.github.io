@@ -4,10 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ravi Kumar Portfolio</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/favico/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favico/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favico/favicon-16x16.png">
-  <link rel="manifest" href="./images/favico/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/favico/site.webmanifest" />
     <!-- Include Tailwind CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
@@ -170,7 +184,7 @@
         </div>
       </section>
       <!-- /image section -->
-      <hr class="border-gray-400 mx-44" id="experience"/>
+      <hr class="border-gray-400 mx-44" id="experience" />
       <!-- Experience -->
       <section class="px-20 mt-10">
         <h4 class="mb-8 text-3xl font-bold text-center md:text-left">
@@ -221,7 +235,9 @@
                 Associate Consultant
               </h5>
               <h6 class="text-lg font-bold text-gray-500">Virtusa</h6>
-              <p>Full-time · 3 yrs 1 mo</p>
+              <p>
+                Full-time · <span id="experience-virtusa-yrs">3 yrs 1 mo</span>
+              </p>
               <p>Pune, Maharashtra, India</p>
             </div>
           </div>
@@ -330,7 +346,7 @@
           Personal Projects
         </h4>
         <div class="flex flex-row flex-wrap">
-            <!-- PROJECT #1-->
+          <!-- PROJECT #1-->
           <div
             class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2md my-4"
           >
@@ -358,7 +374,7 @@
                   <li>Search Animes</li>
                 </ol>
 
-                <div class="mt-4">
+                <div class="mt-4 flex flex-row flex-wrap gap-1/2">
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
                     >#HTML</span
@@ -389,21 +405,36 @@
                 <p
                   href="#"
                   class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
-                  >Spotify Clone</p
                 >
+                  Spotify Clone
+                </p>
                 <p class="mt-2 text-gray-500">
-                  This app created with React for the front-end and Spring
-                  Boot for the back-end.
+                  This app created with React for the front-end and Spring Boot
+                  for the back-end.
                 </p>
                 <ol class="list-disc pl-6">
-                  <li>Frontend: <a href="https://github.com/rkumarkravi/react-projects/tree/master/spotify-clone"> repo link </a></li>
-                  <li>Backend: <a href="https://github.com/rkumarkravi/spring-boot-projects/tree/main/musify-rk"> repo link </a></li>
+                  <li>
+                    Frontend:
+                    <a
+                      href="https://github.com/rkumarkravi/react-projects/tree/master/spotify-clone"
+                    >
+                      repo link
+                    </a>
+                  </li>
+                  <li>
+                    Backend:
+                    <a
+                      href="https://github.com/rkumarkravi/spring-boot-projects/tree/main/musify-rk"
+                    >
+                      repo link
+                    </a>
+                  </li>
                   <li>Listen Songs</li>
                   <li>Upload new Songs</li>
                   <li>Search Songs</li>
                 </ol>
 
-                <div class="mt-4">
+                <div class="mt-4 flex flex-row flex-wrap gap-1/2">
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
                     >#React</span
@@ -437,7 +468,8 @@
                   >Receipe Book</a
                 >
                 <p class="mt-2 text-gray-500">
-                  This app created with React for the front-end and Node.js for the back-end.
+                  This app created with React for the front-end and Node.js for
+                  the back-end.
                 </p>
                 <ol class="list-disc pl-6">
                   <li>Create new Receipe</li>
@@ -446,7 +478,7 @@
                   <li>Search Receipe</li>
                 </ol>
 
-                <div class="mt-4">
+                <div class="mt-4 flex flex-row flex-wrap gap-1/2">
                   <span
                     class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
                     >#React</span
@@ -476,12 +508,14 @@
       <div class="h-80"></div>
     </div>
     <script>
-      function calculateDifference(date, id) {
+      function calculateDifference(fromDate, endDate, id) {
         // Get the start date
-        var startDate = new Date(date); // Example start date
-
-        // Get the current date
+        var startDate = new Date(fromDate); // Example start date
         var currentDate = new Date();
+        // Get the current date
+        if (endDate) {
+          currentDate = new Date(endDate);
+        }
 
         // Calculate the difference in years and months
         var yearsDiff = currentDate.getFullYear() - startDate.getFullYear();
@@ -497,8 +531,9 @@
         document.getElementById(id).innerHTML =
           yearsDiff + (yearsDiff === 1 ? " yr " : " yrs ") + monthsDiff + " mo";
       }
-      calculateDifference("2022-06-20", "result-exp-SM");
-      calculateDifference("2019-06-10", "experience-yrs");
+      calculateDifference("2022-06-20", null, "result-exp-SM");
+      calculateDifference("2019-06-10", null, "experience-yrs");
+      calculateDifference("2019-06-10", "2022-06-20", "experience-virtusa-yrs");
     </script>
   </body>
 </html>
